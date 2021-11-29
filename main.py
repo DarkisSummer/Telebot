@@ -7,7 +7,7 @@ bot = telebot.TeleBot(token)
 @bot.message_handler(commands=['start'])
 def start(message):
     keyboard = types.ReplyKeyboardMarkup()
-    keyboard.row("/help")
+    keyboard.row("начать", "/help")
     bot.send_message(message.chat.id, 'Привет! Хочешь научиться спидраннингу?', reply_markup=keyboard)
 
 
